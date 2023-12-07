@@ -58,7 +58,7 @@ export default class App extends Component<{}, AppState> {
     }
   }
 
-  componentDidUpdate({}, prevState: AppState): void {
+  componentDidUpdate(_: any, prevState: AppState): void {
     if (this.state.contacts !== prevState.contacts) {
       try {
         localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
